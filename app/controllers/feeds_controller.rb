@@ -41,7 +41,7 @@ class FeedsController < ApplicationController
   end
 
   def show
-    @feed = Post.find( params[:id] )
+    @feed = Feed.find( params[:id] )
 
   end
   
