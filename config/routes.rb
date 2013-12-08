@@ -1,5 +1,6 @@
 Classy::Application.routes.draw do
   
+  devise_for :users
   # resources :feeds do
   #   resources :comments
   # end
