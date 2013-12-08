@@ -1,0 +1,9 @@
+<blockquote>
+	<p><%= comment.body %></p>
+	<small><cite><%= comment.user.name %></cite></small>
+	<% if user_signed_in? and current_user.id == comment.user.id %>
+	<%= link_to content_tag( :span, nil, class: 'glyphicon glyphicon-trash' ), [comment.post, comment],
+	               method: :delete,
+	               data: { confirm: 'Are you sure?' }, remote: true %>
+    <% end %>
+</blockquote>

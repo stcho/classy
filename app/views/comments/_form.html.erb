@@ -1,0 +1,10 @@
+<%= form_for( [@post, @post.comments.build], html: { role: 'form' }, remote: true ) do |f| %>
+
+	<div class="form-group">
+    	<%= f.text_area :body, class: 'form-control' %>
+	</div>
+	<div class="form-group">
+    	<%= f.submit class: 'btn' %>
+	</div>
+	
+<% end %>
