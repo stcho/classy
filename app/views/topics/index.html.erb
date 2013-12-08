@@ -1,0 +1,16 @@
+<%= title( 'Course Specific Topics' ) %>
+
+<div class="row-fluid">
+	<div class="col-md-10">
+		<h1>Topics</h1>
+		
+		<%= render @topics %>
+
+	</div>
+	<div class="col-md-2">
+		<% if user_signed_in? %>
+			<p><%= link_to 'New Topic', new_topic_path, class: 'btn btn-primary' %></p>
+		<% end %>
+		<hr>		
+	</div>
+</div>

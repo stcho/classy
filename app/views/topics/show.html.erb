@@ -1,0 +1,35 @@
+<%= title( @topic.title ) %>
+
+<div class="row-fluid" >
+	<div class="col-md-12">
+
+		<h2>
+			<%= @topic.title %>
+		</h2>
+		<p>
+			<%= @topic.description %>
+		</p>
+		<p>
+			By <%= @topic.user.name %>, Created <%= nice_date( @topic.created_at ) %>
+		</p>
+		
+		<% if user_signed_in? %>
+			<%= link_to 'Edit Topic', edit_topic_path(@topic), class: 'btn btn-primary' %>
+		<% end %>
+
+		<h3>Feeds</h3>
+		<div id="feeds-list">
+			<%= render @topic.feeds %>
+		</div>
+
+		<% if user_signed_in? %>
+			<h3>Add a feed:</h3>
+			<div id="feeds-form">
+				<%= render "feeds/form" %>
+			</div>
+		<% end %>
+ 
+		
+	</div>
+</div>
+

@@ -1,0 +1,21 @@
+<article>
+	<h2><%= link_to topic.title, topic_path(topic) %></h2>
+	<p><%= topic.text %></p>
+	<p>
+		By <%= topic.user.name %>, created <%= nice_date( topic.created_at ) %>
+		<% if user_signed_in? %>
+			<span style="margin-left: 12px;">
+				<%= link_to content_tag( :span, nil, class: 'glyphicon glyphicon-edit' ), edit_topic_path(topic) %>&nbsp;
+				<%= link_to content_tag( :span, nil, class: 'glyphicon glyphicon-trash' ), topic_path(topic), method: :delete, data: { confirm: 'Are you sure you want to delete the topic "' + topic.title + '"?'} %>
+			</span>
+		<% end %>
+	</p>
+	<p>
+	<% topic.tags.each do |tag| %>
+		<span class="label label-success"><%= tag.name %></span>
+	<% end %>
+	</p>
+	
+</article>
+
+<hr>

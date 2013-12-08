@@ -1,4 +1,4 @@
-<%= form_for( [@feed, @feed.comments.build], html: { role: 'form' }, remote: true ) do |f| %>
+<%= form_for( [@topic, @topic.comments.build], html: { role: 'form' }, remote: true ) do |f| %>
 
 	<div class="form-group">
     	<%= f.text_area :text, class: 'form-control' %>

@@ -1,0 +1,2 @@
+$("#feeds-list").html("<%= escape_javascript( render @feeds.comments ) %>" );
+$("#feeds-form").html("<%= escape_javascript( render 'comments/form' ) %>" );
