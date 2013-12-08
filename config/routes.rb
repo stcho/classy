@@ -1,5 +1,19 @@
 Classy::Application.routes.draw do
   
+  get "users/new"
+  get "users/create"
+  get "users/update"
+  get "users/edit"
+  get "users/destroy"
+  get "users/index"
+  get "users/show"
+  get "comments/new"
+  get "comments/create"
+  get "comments/update"
+  get "comments/edit"
+  get "comments/destroy"
+  get "comments/index"
+  get "comments/show"
   devise_for :users
   resources :users
   
