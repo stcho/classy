@@ -11,3 +11,45 @@
  *= require_self
  *= require_tree .
  */
+
+ .field_with_errors label {
+ 	color: red;
+ 	font-weight: bold;
+ }
+ .field_with_errors input, .field_with_errors textarea {
+ 	border: 2px solid red;
+ }
+ .topic-title {
+ 	min-width: 200px;
+ }
+
+ .blog-navbar {
+ 	text-shadow: 0 -1px 0 rgba(0,0,0,.15);
+ 	background-color: #563d7c;
+ 	border-color: #463265;
+ 	box-shadow: 0 1px 0 rgba(255,255,255,.1);
+ }
+ .blog-navbar .navbar-collapse {
+   border-color: #463265;
+ }
+ .blog-navbar .navbar-brand {
+   color: #fff;
+ }
+ .blog-navbar .navbar-nav > li > a {
+   color: #cdbfe3;
+ }
+ .blog-navbar .navbar-nav > li > a:hover {
+   color: #fff;
+ }
+ .blog-navbar .navbar-nav > .active > a,
+ .blog-navbar .navbar-nav > .active > a:hover {
+   color: #fff;
+   background-color: #463265;
+ }
+ .blog-navbar .navbar-toggle {
+   border-color: #563d7c;
+ }
+ .blog-navbar .navbar-toggle:hover {
+   background-color: #463265;
+   border-color: #463265;
+ }

@@ -1,7 +1,5 @@
 class TopicsController < ApplicationController
 
-  class topicsController < ApplicationController
-
     before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
 
     def new
@@ -51,7 +49,5 @@ class TopicsController < ApplicationController
       def topic_params
         params.require(:topic).permit( :text )
       end
-
-  end
 
 end
