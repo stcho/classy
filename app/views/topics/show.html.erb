@@ -10,20 +10,20 @@
 			<%= @topic.description %>
 		</p>
 		<p>
-			By <%= @topic.user.name %>, Created <%= nice_date( @topic.created_at ) %>
+			By <%= @topic.user.email %>, Created <%= nice_date( @topic.created_at ) %>
 		</p>
 		
 		<% if user_signed_in? %>
 			<%= link_to 'Edit Topic', edit_topic_path(@topic), class: 'btn btn-primary' %>
 		<% end %>
 
-		<h3>Feeds</h3>
+		<h3>Discussion</h3>
 		<div id="feeds-list">
 			<%= render @topic.feeds %>
 		</div>
 
 		<% if user_signed_in? %>
-			<h3>Add a feed:</h3>
+			<h3>Add a Feed<h3>
 			<div id="feeds-form">
 				<%= render "feeds/form" %>
 			</div>
