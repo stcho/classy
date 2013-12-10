@@ -36,7 +36,7 @@ class TopicsController < ApplicationController
     end
 
     def index
-      @topics = Topic.order( 'created_at DESC' ).limit( @topics_per_page )
+      @topics = Topic.all
 
     end
 

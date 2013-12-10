@@ -7,10 +7,5 @@
 		<%= render @topics %>
 
 	</div>
-	<div class="col-md-2">
-		<% if user_signed_in? %>
-			<p><%= link_to 'New Topic', new_topic_path, class: 'btn btn-primary' %></p>
-		<% end %>
-		<hr>		
-	</div>
+
 </div>
