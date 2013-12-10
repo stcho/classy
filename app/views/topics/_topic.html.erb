@@ -3,7 +3,7 @@
 	<p><%= topic.description %></p>
 	<p>
 		By <%= topic.user.name %>, created <%= nice_date( topic.created_at ) %>
-		<% if user_signed_in? %>
+		<% if user_signed_in? and current_user.id == topic.user.id %>
 			<span style="margin-left: 12px;">
 				<%= link_to content_tag( :span, nil, class: 'glyphicon glyphicon-edit' ), edit_topic_path(topic) %>
 				<%= link_to content_tag( :span, nil, class: 'glyphicon glyphicon-trash' ), topic_path(topic), method: :delete, data: { confirm: 'Are you sure you want to delete the topic?'} %>

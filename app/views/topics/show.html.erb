@@ -11,11 +11,11 @@
 		</p>
 		<p>
 			By <%= @topic.user.email %>, Created <%= nice_date( @topic.created_at ) %>
-		</p>
-		
-		<% if user_signed_in? %>
-			<%= link_to 'Edit Topic', edit_topic_path(@topic), class: 'btn btn-primary' %>
-		<% end %>
+
+	    <% if user_signed_in? and current_user.id == @topic.user.id %>
+      <%= link_to content_tag( :span, nil, class: 'glyphicon glyphicon-edit' ), edit_topic_path(@topic) %>
+    		<% end %>
+        </p>
 
 		<h3>Discussion</h3>
 		<div id="feeds-list">

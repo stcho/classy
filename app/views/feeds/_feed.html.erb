@@ -1,9 +1,10 @@
 <blockquote>
-	<p><%= feed.body %></p>
-	<small><cite><%= feed.user.name %></cite></small>
+	<small><%= feed.user.email %>
 	<% if user_signed_in? and current_user.id == feed.user.id %>
-	<%= link_to content_tag( :span, nil, class: 'glyphicon glyphicon-trash' ), [feed.topic, feed],
-	               method: :delete,
-	               data: { confirm: 'Are you sure?' }, remote: true %>
-    <% end %>
+  <%= link_to content_tag( :span, nil, class: 'glyphicon glyphicon-edit' ), edit_topic_path(feed), remote: true %>
+	<%= link_to content_tag( :span, nil, class: 'glyphicon glyphicon-trash' ), [feed.topic, feed], method: :delete, data: { confirm: 'Are you sure?' }, remote: true %>
+	</small>
+	  <% end %>
+		<p><%= feed.text %></p>
+	
 </blockquote>
