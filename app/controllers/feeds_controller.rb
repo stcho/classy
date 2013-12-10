@@ -36,7 +36,7 @@ class FeedsController < ApplicationController
   end
 
   def index
-    @feeds = Feed.order( 'created_at DESC' ).limit( @feeds_per_page )
+    @feeds = Feed.all
 
   end
 
