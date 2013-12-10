@@ -13,7 +13,7 @@
 			By <%= @topic.user.email %>, Created <%= nice_date( @topic.created_at ) %>
 
 	    <% if user_signed_in? and current_user.id == @topic.user.id %>
-      <%= link_to content_tag( :span, nil, class: 'glyphicon glyphicon-edit' ), edit_topic_path(@topic) %>
+      <%= link_to content_tag( :span, nil, class: 'glyphicon glyphicon-pencil' ), edit_topic_path(@topic) %>
     		<% end %>
         </p>
 

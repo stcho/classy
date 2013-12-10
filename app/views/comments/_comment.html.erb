@@ -1,9 +1,9 @@
 <blockquote>
-	<p><%= comment.body %></p>
-	<small><cite><%= comment.user.name %></cite></small>
+	<small><%= comment.user.email %>
 	<% if user_signed_in? and current_user.id == comment.user.id %>
-	<%= link_to content_tag( :span, nil, class: 'glyphicon glyphicon-trash' ), [comment.feed, comment],
-	               method: :delete,
-	               data: { confirm: 'Are you sure?' }, remote: true %>
-    <% end %>
+  <%= link_to content_tag( :span, nil, class: 'glyphicon glyphicon-pencil' ), edit_topic_path(comment), remote: true %>
+	<%= link_to content_tag( :span, nil, class: 'glyphicon glyphicon-trash' ), [comment.topic, comment], method: :delete, data: { confirm: 'Are you sure?' }, remote: true %>
+	</small>
+	  <% end %>
+		<p><%= comment.text %></p>
 </blockquote>

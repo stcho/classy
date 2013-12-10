@@ -1,0 +1,30 @@
+<% @topics.each do |s| -%>		
+<table>		
+
+			 <div class="topicBox">
+
+			 <div class="accordion-group">  
+              <div class="accordion-heading">  
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+						<tr>
+							<td><div class="topicRow">
+							<%= s.title %> 
+							</div>
+							</td>
+						</tr>
+
+					</div>
+					</table>
+
+				<div id="collapseThree" class="accordion-body collapse">  
+	                <div class="accordion-inner">  
+					<div class="feedBox">  
+	                 	<%= s.text %>
+
+	                </div>  
+	              </div>  
+	            </div>
+<% end %>
+
+<script type="text/javascript" src="/twitter-bootstrap/twitter-bootstrap-v2/docs/assets/js/jquery.js"></script>  
+<script type="text/javascript" src="/twitter-bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-collapse.js"></script>  
